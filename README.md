@@ -158,11 +158,10 @@ PC Register영역
 
 가비지 컬렉터(GC)는 언제 작동 되는가  
 
-GC는 다음 방법 중 하나를 사용하여 요청할 수 있습니다.
+GC는 다음 방법 중 하나를 사용하여 요청할 수 있습니다.  
 
-# 1) System.gc () : Java의 System 클래스는 가비지 콜렉터를 실행하기 위해 JVM을 요청할 수있는 정적 메소드 gc ()를 제공합니다.
-
-# 2) Runtime.getRuntime (). gc () : System.gc ()와 마찬가지로 'Runtime class'의 gc () 메서드를 사용하여 가비지 수집기를 실행하도록 JVM을 요청할 수도 있습니다.
+1) System.gc () : Java의 System 클래스는 가비지 콜렉터를 실행하기 위해 JVM을 요청할 수있는 정적 메소드 gc ()를 제공합니다.  
+2) Runtime.getRuntime (). gc () : System.gc ()와 마찬가지로 'Runtime class'의 gc () 메서드를 사용하여 가비지 수집기를 실행하도록 JVM을 요청할 수도 있습니다.  
 
 <b>가비지 컬렉터?  
 -쓰레기 수집(garbage collection 가비지 컬렉션[*], GC)은 메모리 관리 기법 중의 하나로, 프로그램이 동적으로 할당했던 메모리 영역 중에서 필요없게 된 영역을 해제하는 기능이다.  
