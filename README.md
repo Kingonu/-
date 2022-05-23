@@ -139,9 +139,9 @@ API Document를 통해 사용법을 제공
 
 ★2.2 자바의 메모리 구조  
 
-Class영역 | Stack영역 | Heap영역 | Nailve method영역 | PC Register영역  
-
-
+Class영역 | Stack영역 | Heap영역 | Nailve method영역 | PC Register영역  <br/>
+<br/>
+<br/>
 
 Class영역(Method영역)  
  - JVM에서 읽어들인 클래스와 인터페이스에 대한 런타임 상수 풀, 메서드와 필드 Static 변수, 메서드 바이트 코드 등을 보관  
