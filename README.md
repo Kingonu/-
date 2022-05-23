@@ -346,9 +346,9 @@ Static 키워드를 통해 생성된 정적멤버들은 Heap영역이 아닌 Sta
  
  - insance는 class를 통해 구체적인 데이터를 전달받아 생성이라는 작업을 통해 메모리에 적재된 결과물을 말한다.
  
- + class는 붕어빵 틀 / +instance는 붕어빵 / 안에 팥을 넣을지 슈크림을 넣을지는 내가 선택
+ + class는 붕어빵 틀 / instance는 붕어빵 / 안에 팥을 넣을지 슈크림을 넣을지는 내가 선택
  
- ![image](https://user-images.githubusercontent.com/93306939/169753389-9b2877ad-ff56-4b29-83fc-5d16f1e37a76.png)
+![image](https://user-images.githubusercontent.com/93306939/169754049-df588407-db65-4dfa-8f86-0b8b2e2ac56c.png)
  
 ---------------------------------------------------------------------------------------------
  
