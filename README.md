@@ -328,26 +328,91 @@ Static 키워드를 통해 생성된 정적멤버들은 Heap영역이 아닌 Sta
 
 # 재귀호출
 
-#include <stdio.h>
+#include <stdio.h>  
+  
+int factorial(int n)  
+{  
+    if (n == 1)      // n이 1일 때  
+        return 1;    // 1을 반환하고 재귀호출을 끝냄  
+  
+    return n * factorial(n - 1);    // n과 factorial 함수에 n - 1을 넣어서 반환된 값을 곱함  
+}  
+  
+int main()  
+{  
+    printf("%d", factorial(5));  
+  
+    return 0;  
+}  
 
-int factorial(int n)
-{
-    if (n == 1)      // n이 1일 때
-        return 1;    // 1을 반환하고 재귀호출을 끝냄
+형, 함수 factorial(int n)에 5를 넣어  
+그러면 if로 들어가 (n == 1) 5니까 false야   
+  
+아래로 내려가서 return n * factorial(n - 1);이 실행되  
 
-    return n * factorial(n - 1);    // n과 factorial 함수에 n - 1을 넣어서 반환된 값을 곱함
-}
+factorial(n - 1)가 함수 재귀호출을 했어    
+  
+이때 메모리는 아래 그림과 같아  
 
-int main()
-{
-    printf("%d", factorial(5));
+ㅣ                               ㅣ   
+ㅣ n - 1 지역변수 (여기선 5 - 1)  ㅣ  
+ㅣ 반환 주소 값 (돌아올 위치)     ㅣ  
+ㅣ 5 (매개변수)                  ㅣ    
+  
+![image](https://user-images.githubusercontent.com/93306939/169744532-84501f83-1f3f-482a-8023-4e0b460fb462.png)
+  
+그러면 factorial(n - 1)가 호출됬으니 n == 5   
+5 - 1인 4로 factorial(int n)를 호출해  
+  
+  
+이때 메모리는 아래 그림과 같아  
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ  
+ㅣ                               ㅣ   
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ  
+ㅣ n - 1 지역변수 (여기선 4 - 1)  ㅣ  
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ  
+ㅣ 반환 주소 값 (돌아올 위치)     ㅣ  
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ  
+ㅣ 4 (매개변수)                  ㅣ  
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ  
+ㅣ n - 1 지역변수 (여기선 5 - 1)  ㅣ  
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ  
+ㅣ 반환 주소 값 (돌아올 위치)     ㅣ  
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ  
+ㅣ 5 (매개변수)                  ㅣ  
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ  
+  
+if (n == 1) 이 아니니  
+또 함수안에서 자기를 호출하고, 재귀를 해  
+그러면 factorial(n - 1)가 호출됬으니 n == 4  
+  
+... 반복을 해  
+  
+이렇게 n == 1 까지 메모리가 쌓이고 1이 되면 1을 반환하고 끝낼꺼야  
+  
+return n * factorial(n - 1);  
+그러면 여기 이 문장에서  
+마지막에 1이 리턴됬으니  
+처음은 2 * 1이 되고 이 값인 2를 반환 주소 값으로 보낼꺼야  
+  
+그러면 2가 반환 주소값으로 돌아가겠지?  
+  
+그러면 다음은 2가 반환 됬으니 3*2  
+  
+그다음은 4*6....  
+  
+![image](https://user-images.githubusercontent.com/93306939/169744557-32ad54c9-f0b0-4ad7-bf9f-66e0067d5350.png)
 
-    return 0;
-}
+위 그림처럼 하나씩 반환 되겠지  
+이러한 함수 호출 방식을 재귀 호출이라 합니다.  
 
 ![image](https://user-images.githubusercontent.com/93306939/169743896-863838c8-fbff-4684-895c-ac6513dd9648.png)
 
 ![image](https://user-images.githubusercontent.com/93306939/169743698-efabee76-4c3a-46e8-bbe1-dcd6ec8d080e.png)
+
+
+
+
 
 
 
