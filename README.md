@@ -420,31 +420,165 @@ Static 키워드를 통해 생성된 정적멤버들은 Heap영역이 아닌 Sta
  - 객체지향 프로그래밍에서 코드의 재사용성과 확장성을 높임으로써 프로그램의 유지보수를 좀 더 쉽게 해준다.
   
  **상속의 대상**  
- 자식 클래스가 부모 클래스로부터 상속을 받게 되면 부모 클래스의 필드와 메서드를 물려받게 된다. 단, 접근제어자가 private을 갖는 필드나 메소드는 상속이 불가하고, 패키지가 다를 경우 접근제어자가 default인 경우도 상속이 불가하다.
+ 자식 클래스가 부모 클래스로부터 상속을 받게 되면 부모 클래스의 필드와 메서드를 물려받게 된다.  
+ 단, 접근제어자가 private을 갖는 필드나 메소드는 상속이 불가하고, 패키지가 다를 경우 접근제어자가 default인 경우도 상속이 불가하다.  
 
  **상속의 장점**  
- 상속의 장점은 처음에 설명했던 것과 큰 차이가 없다. 중복된 코드를 줄일 수 있고, 유지 보수가 편리하며, 통일성이 있고 다형성을 구현할 수 있다.
+ 상속의 장점은 처음에 설명했던 것과 큰 차이가 없다. 중복된 코드를 줄일 수 있고,  
+ 유지 보수가 편리하며, 통일성이 있고 다형성을 구현할 수 있다.  
 
 **상속의 방법(선언) - extends**  
- 상속을 받는 방법은 간단하다. 상속받을 자식 클래스 뒤에 extends 키워드를 사용하고 부모 클래스를 적어주면 된다.
+ 상속을 받는 방법은 간단하다. 상속받을 자식 클래스 뒤에 extends 키워드를 사용하고 부모 클래스를 적어주면 된다.  
  
 ![image](https://user-images.githubusercontent.com/93306939/169769222-35289bd8-865d-45cd-b56b-84b3813eb835.png)
  
- 그리고 자바에서는 자식 클래스가 여러 부모로부터 다중 상속을 받는 것은 불가능하다. 즉, 1개의 부모 클래스로부터의 단일 상속만 허용된다.  하지만 부모 클래스는 여러 개의 자식 클래스에게 상속이 가능하다.
+ 그리고 자바에서는 자식 클래스가 여러 부모로부터 다중 상속을 받는 것은 불가능하다.  
+ 즉, 1개의 부모 클래스로부터의 단일 상속만 허용된다.  하지만 부모 클래스는 여러 개의 자식 클래스에게 상속이 가능하다.  
 
 ---------------------------------------------------------------------------------------------
  
-### <b> 2.20 Polymorpgism(다형성)에 대해 설명하세요</b>
+### <b> 2.20 Polymorpgism(다형성)에 대해 설명하세요</b>  
 
- - 다형성이란 '많은 형태를 가지고 있다.' 라는 뜻
- - 상속 관계에서 같은 기능이 여러 형태로 존재하는 것을 의미
- - 메서드 오버라이딩(method overriding)
- - 메서드 오버로딩(method overloading)
+![image](https://user-images.githubusercontent.com/93306939/169769752-51c25428-59b0-41b0-accf-4a98108cb11e.png)
+다형성(polymorphism)이란 하나의 객체가 여러 가지 타입을 가질 수 있는 것을 의미합니다.  
+
+ - 다형성이란 '많은 형태를 가지고 있다.' 라는 뜻  
+ - 상속 관계에서 같은 기능이 여러 형태로 존재하는 것을 의미  
+ - 메서드 오버로딩(method overloading)  
+ - 메서드 오버라이딩(method overriding)  
  - 다형적 변수(polymorphic variable)
+
+EX )  
+
+class Parent { ... }  
+class Child extends Parent { ... }  
+
+...  
+
+Parent pa = new Parent(); // 허용  
+Child ch = new Child();   // 허용  
+Parent pc = new Child();  // 허용  
+Child cp = new Parent();  // 오류 발생.  
+
+![image](https://user-images.githubusercontent.com/93306939/169774952-a115b143-fcf1-4063-9daa-e22ce452385c.png)
+
+**오버로딩(Overloading)**  
+
+구체적으로 메서드 오버로딩을 예시로 들면,  
+자바의 PrintStream.class에 정의되어 있는 println이라는 함수는 다음과 같이 매개변수만  
+다른 여러 개의 메소드가 정의되어 있다. 매개변수로 배열을 넣을 때, 문자열을 넣을 때, 그리고 객체를 넣을 때  
+모두 println이라는 메소드 시그니처를 호출하여 원하는 내용을 출력하는 기능을 수행한다.  
+
+public class PrintStream {  
+	...  
+	public void println() {  
+		this.newLine();  
+	}  
+  
+	public void println(boolean x) {  
+  		synchronized(this) {  
+      	this.print(x);  
+      	this.newLine();  
+  		}  
+	}  
+  
+	public void println(char x) {  
+    	synchronized(this) {  
+        	this.print(x);  
+        	this.newLine();  
+    	}  
+	}  
+  
+	public void println(int x) {  
+    	synchronized(this) {  
+        	this.print(x);  
+        	this.newLine();  
+    	}  
+	}  
+	...  
+}  
+  
+오버로딩은 여러 종류의 타입을 받아들여 결국엔 같은 기능을 하도록 만들기 위한 작업이다.  
+이 역시 메소드를 동적으로 호출할 수 있으니 다형성이라고 할 수 있다.  
+하지만 메소드를 오버로딩하는 경우 요구사항이 변경되었을 때 모든 메소드에서  
+수정이 수반되므로 필요한 경우에만 적절히 고려하여 사용하는 것이 좋을 듯 하다.  
+  
+  
+**오버라이딩(Overriding)**  
+
+오버로딩과 이름이 비슷해 헷갈릴수도 있다.  
+오버라이딩은 상위 클래스의 메서드를 하위 클래스에서 재정의하는 것을 말한다.  
+따라서 여기서는 상속의 개념이 추가된다.  
+아래 예시로 보인 추상 클래스 Figure에는 하위 클래스에서 오버라이드 해야 할 메소드가 정의되어 있다.  
+  
+public abstract class Figure {  
+    protected int dot;  
+    protected int area;  
+  
+    public Figure(final int dot, final int area) {  
+        this.dot = dot;  
+        this.area = area;  
+    }  
+  
+    public abstract void display();  
+
+	  // getter  
+}  
+Figure을 상속받은 하위 클래스인 Triangle 객체는 해당 객체에 맞는 기능을 구현한다.  
+
+public class Triangle extends Figure {  
+    public Triangle(final int dot, final int area) {  
+        super(dot, area);  
+    }  
+  
+    @Override  
+    public void display() {  
+        System.out.printf("넓이가 %d인 삼각형입니다.", area);  
+    }  
+}  
+  
+만약 사각형 객체를 추가하고 싶다면,  
+같은 방식으로 Figure을 상속받되 메소드 부분에서 사각형에 맞는 display 메소드를 구현해주면 된다.  
+이렇게 하면 추후 도형 객체가 추가되더라도 도형 객체가 실제로 사용되는 비즈니스 로직의 변경을 최소화할 수 있다.  
+
+public static void main(String[] args) {  
+    Figure figure = new Triangle(3, 10); // 도형 객체 추가 또는 변경 시 이 부분만 수정  
+  
+    for (int i = 0; i < figure.getDot(); i++) {  
+        figure.display();  
+    }  
+}  
+
+만약 여기서 다형성을 사용하지 않고 도형 객체를 추가하는 로직을 생각해 본다면  
+아마 다음과 같이 if-else분기가 늘어나게 될 것이다.  
+도형이 2개 밖에 없는데도 벌써 코드양 차이가 보이는가?  
+  
+public static void main1(String[] args) {  
+    int dot = SCANNER.nextInt();  
+
+    if (dot == 3) {  
+        Triangle triangle = new Triangle(3, 10);  
+        for (int i = 0; i < triangle.getDot(); i++) {  
+            triangle.display();  
+        }  
+    } else if(dot == 4) {  
+        Rectangle rectangle = new Rectangle(4, 20);  
+        for (int i = 0; i < rectangle.getDot(); i++) {  
+            rectangle.display();  
+        }  
+    }  
+	  ....  
+
+}  
+여기까지 오버라이드 방식으로 다형성을 구현하는 방법을 살펴보았다.  
+예시에서는 추상클래스를 사용했지만, 인터페이스도 구현의 정도만 차이가 있을 뿐 같은 사용 방식은 같다.  
+오버라이드 다형성 방식을 잘 활용하면, 기능의 확장과 객체의 수정에 유연한 구조를 가져갈 수 있다.  
 
 ---------------------------------------------------------------------------------------------
  
 ### <b> 2.21 추상 클래스(Abstract Class)에 대해 설명하세요.</b>
+ 
+ 
  
  - 클래스 내에 일부 메서드가 구현되지 않고 선언부만 가진 형태의 메서드를 포함한 클래스
  - 구현되지 않은 메서드를 추상 메서드라고 부른다.
