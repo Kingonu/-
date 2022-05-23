@@ -348,7 +348,7 @@ Static 키워드를 통해 생성된 정적멤버들은 Heap영역이 아닌 Sta
  
  + class는 붕어빵 틀 / instance는 붕어빵 / 안에 팥을 넣을지 슈크림을 넣을지는 내가 선택
  
-![image](https://user-images.githubusercontent.com/93306939/169754049-df588407-db65-4dfa-8f86-0b8b2e2ac56c.png)
+[![image](https://user-images.githubusercontent.com/93306939/169754049-df588407-db65-4dfa-8f86-0b8b2e2ac56c.png)](https://postfiles.pstatic.net/MjAyMDExMDNfMTY4/MDAxNjA0Mzg0MTI0MzIz.CaIguLIoFaVdBVFXIEEBCnsoKLxOqKv6F0Kw3SmHCvEg.6B00UCWN0CIb0ixugYIDCXzCEtR4z1zpXOWWmISUYe8g.PNG.seungbami21/1.png?type=w773)
  
 ---------------------------------------------------------------------------------------------
  
