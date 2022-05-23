@@ -448,6 +448,8 @@ Static 키워드를 통해 생성된 정적멤버들은 Heap영역이 아닌 Sta
  - 메서드 오버라이딩(method overriding)  
  - 다형적 변수(polymorphic variable)
 
+
+```
 EX )  
 
 class Parent { ... }  
@@ -459,7 +461,7 @@ Parent pa = new Parent(); // 허용
 Child ch = new Child();   // 허용  
 Parent pc = new Child();  // 허용  
 Child cp = new Parent();  // 오류 발생.  
-
+```
 
 
 **오버로딩(Overloading)**  
