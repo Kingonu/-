@@ -326,7 +326,7 @@ Static 키워드를 통해 생성된 정적멤버들은 Heap영역이 아닌 Sta
 ---------------------------------------------------------------------------------------------
 
 
-재귀
+# 재귀호출
 
 #include <stdio.h>
 
@@ -345,9 +345,9 @@ int main()
     return 0;
 }
 
+![image](https://user-images.githubusercontent.com/93306939/169743896-863838c8-fbff-4684-895c-ac6513dd9648.png)
 
 ![image](https://user-images.githubusercontent.com/93306939/169743698-efabee76-4c3a-46e8-bbe1-dcd6ec8d080e.png)
-![image](https://user-images.githubusercontent.com/93306939/169743773-22014dd2-e560-48e8-a19b-21cc966b10eb.png)
 
 
 
