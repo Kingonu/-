@@ -593,10 +593,7 @@ public static void main1(String[] args) {
 ![image](https://user-images.githubusercontent.com/93306939/169774952-a115b143-fcf1-4063-9daa-e22ce452385c.png)
 
 ---------------------------------------------------------------------------------------------
- 
- ![image](https://user-images.githubusercontent.com/93306939/169777175-2a8d39ee-5dc5-4531-9245-e3ac3eebb5bc.png)
 
- 
 ### <b> 2.21 추상 클래스(Abstract Class)에 대해 설명하세요.</b>
  
  - 클래스 내에 일부 메서드가 구현되지 않고 선언부만 가진 형태의 메서드를 포함한 클래스
@@ -671,6 +668,8 @@ public interface User { ... }
 ---------------------------------------------------------------------------------------------
 
 ### p.s 추상클래스와 인터페이스 차이점
+
+ ![image](https://user-images.githubusercontent.com/93306939/169777175-2a8d39ee-5dc5-4531-9245-e3ac3eebb5bc.png)
 
 **추상 클래스**
 간단히 말하면...
