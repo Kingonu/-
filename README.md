@@ -663,7 +663,7 @@ public static void main1(String[] args) {
 public interface User { ... }
 ```
 
-[더 자세한 내용은]([https://google.com](https://interconnection.tistory.com/129)
+[더 자세한 내용은](https://interconnection.tistory.com/129)
 
 ---------------------------------------------------------------------------------------------
 
