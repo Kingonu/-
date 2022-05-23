@@ -94,7 +94,7 @@ ex) SUB R1,R2,R3 - 레지스터 감산
 <b>2. 고급 프로그래밍 언어 또는 하이 레벨 프로그래밍 언어(high-level programming language)  
   사람이 이해하기 쉽게 작성된 프로그래밍 언어  </b>
   
-  JAVA기준으로 설명  
+  ### JAVA기준으로 설명  
   
   ![image](https://user-images.githubusercontent.com/93306939/169713638-2048897c-78d6-4f29-a2e5-3b1031a24102.png)
 
