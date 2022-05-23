@@ -469,7 +469,7 @@ Child cp = new Parent();  // 오류 발생.
 다른 여러 개의 메소드가 정의되어 있다. 매개변수로 배열을 넣을 때, 문자열을 넣을 때, 그리고 객체를 넣을 때  
 모두 println이라는 메소드 시그니처를 호출하여 원하는 내용을 출력하는 기능을 수행한다.  
 
-....
+```
 public class PrintStream {  
 	 
 	public void println() {  
@@ -498,7 +498,7 @@ public class PrintStream {
 	}  
 	
 }  
-....  
+```
 
 오버로딩은 여러 종류의 타입을 받아들여 결국엔 같은 기능을 하도록 만들기 위한 작업이다.  
 이 역시 메소드를 동적으로 호출할 수 있으니 다형성이라고 할 수 있다.  
@@ -513,7 +513,7 @@ public class PrintStream {
 따라서 여기서는 상속의 개념이 추가된다.  
 아래 예시로 보인 추상 클래스 Figure에는 하위 클래스에서 오버라이드 해야 할 메소드가 정의되어 있다.  
 
-....   
+```  
 public abstract class Figure {  
     protected int dot;  
     protected int area;  
@@ -527,11 +527,11 @@ public abstract class Figure {
 
 	  // getter  
 }  
-....  
+```
 
 Figure을 상속받은 하위 클래스인 Triangle 객체는 해당 객체에 맞는 기능을 구현한다.  
 
-....  
+```
 public class Triangle extends Figure {  
     public Triangle(final int dot, final int area) {  
         super(dot, area);  
@@ -542,13 +542,13 @@ public class Triangle extends Figure {
         System.out.printf("넓이가 %d인 삼각형입니다.", area);  
     }  
 }  
-....  
+```
 
 만약 사각형 객체를 추가하고 싶다면,  
 같은 방식으로 Figure을 상속받되 메소드 부분에서 사각형에 맞는 display 메소드를 구현해주면 된다.  
 이렇게 하면 추후 도형 객체가 추가되더라도 도형 객체가 실제로 사용되는 비즈니스 로직의 변경을 최소화할 수 있다.  
 
-....  
+```
 public static void main(String[] args) {  
     Figure figure = new Triangle(3, 10); // 도형 객체 추가 또는 변경 시 이 부분만 수정  
   
@@ -556,14 +556,14 @@ public static void main(String[] args) {
         figure.display();  
     }  
 }  
-....  
+```
 
 
 만약 여기서 다형성을 사용하지 않고 도형 객체를 추가하는 로직을 생각해 본다면  
 아마 다음과 같이 if-else분기가 늘어나게 될 것이다.  
 도형이 2개 밖에 없는데도 벌써 코드양 차이가 보이는가?  
 
-....   
+``` 
 public static void main1(String[] args) {  
     int dot = SCANNER.nextInt();  
 
@@ -580,7 +580,7 @@ public static void main1(String[] args) {
     }  
 
 }  
-....  
+```
 
 여기까지 오버라이드 방식으로 다형성을 구현하는 방법을 살펴보았다.  
 예시에서는 추상클래스를 사용했지만, 인터페이스도 구현의 정도만 차이가 있을 뿐 같은 사용 방식은 같다.  
