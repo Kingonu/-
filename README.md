@@ -183,6 +183,21 @@ GC는 다음 방법 중 하나를 사용하여 요청할 수 있습니다.
 ![image](https://user-images.githubusercontent.com/93306939/169722024-c10ae161-3980-4596-b6e4-4b12070ab51a.png)
 ![image](https://user-images.githubusercontent.com/93306939/169722039-02ba7bc6-a0c3-4e13-a420-d40fe2869ddb.png)
 
+<b>2.5 for문과 while문의 차이에 대해 설명하시오</b>  
+ 형식에서의 차이점뿐만 아니라  
+쓰는 때가 편의에 따라 조금 다르다.  
 
+while문: 조건이 true인 동안 반복 실행되고,  
+false가 되는 순간 빠져나온다.  
+
+→조건이 트루인동안  
+
+for문: 주어진 조건동안  
+'코드 실행 후 작업' 처리를 반복한다.  
+while문과 다르게 초기값이 주어지면,   
+조건을 만족할 때까지는 실행한다.  
+
+→그냥 조건동안  
+ 
 
 # 6. 메타버스란?
