@@ -9,7 +9,7 @@
 
 ![image](https://user-images.githubusercontent.com/93306939/169712506-da2d7ff2-0398-4549-ae7b-7933dae59204.png)
 
-<b>1. 저급 프로그래밍 언어（低級 프로그래밍 言語）or 로우 레벨 프로그래밍 언어(low-level programming language)</b>
+### <b>1. 저급 프로그래밍 언어（低級 프로그래밍 言語）or 로우 레벨 프로그래밍 언어(low-level programming language)</b>
 
 저급언어
 - 컴퓨터가 이해하기 쉬운 이진법으로 이루어진 언어이다
