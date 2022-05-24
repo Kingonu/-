@@ -143,6 +143,7 @@ API Document를 통해 사용법을 제공
 
 Class영역 | Stack영역 | Heap영역 | Nailve method영역 | PC Register영역  <br/>
 <br/>
+![image](https://user-images.githubusercontent.com/93306939/169925587-47d01c18-6dcf-417a-8687-f526c5637851.png)
 <br/>
 
 **Class영역(Method영역)**  
