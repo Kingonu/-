@@ -803,7 +803,6 @@ Exception의 종류에는 **Checked Exception**과 **Unchecked Exception**이 �
 ### <b> 2.25 Thread란 무엇인가?</b>
 
  ![image](https://user-images.githubusercontent.com/93306939/170173607-f0747961-1af2-400f-9989-29a07aeb5e8e.png)
-![image](https://user-images.githubusercontent.com/93306939/170173624-875f563a-9277-4307-94b4-de6f24a6b23e.png)
 
 **JAVA Thread**  
 - 자바 가상 기계(JVM)에 의해 스케쥴되는 실행 단위의 코드 블럭  
@@ -814,7 +813,9 @@ Exception의 종류에는 **Checked Exception**과 **Unchecked Exception**이 �
 	 - 자바 응용프로그램이 시작될 때 JVM이 함께 실행됨
 	 - 자바 응용프로그램이 종료하면 JVM도 함께 종료함
  - 하나의 응용프로그램은 하나 이상의 스레드로 구성가능
- 
+ - 
+ ![image](https://user-images.githubusercontent.com/93306939/170174203-09b3a09e-098c-49f3-8f84-0b7ff81d67b3.png)
+
 ---------------------------------------------------------------------------------------------
  
 ### <b> 2.26 Stream이란 무엇인가?</b>
