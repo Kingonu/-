@@ -756,23 +756,24 @@ ex) Comparable, Cloneable 인터페이스는 여러 클래스들에서 구현되
 
 **1. Error(에러)**  
 에러(Error)란 컴퓨터 하드웨어의 오동작 또는 고장으로 인해 응용프로그램에 이상이 생겼거나 JVM 실행에 문제가 생겼을 경우 발생하는 것 따라서 개발자가 미리 예측하여 처리할 수 없기 때문에, 애플리케이션에서 오류에 대한 처리를 신경 쓰지 않아도 된다.  
-ex) 메모리 부족(OutOfMemoryError), 스택오버플로우(StackOverFlowError)
-
 즉, 걸리면 프로그램이 숨진다고 생각하면 된다 천재지변이다. (오류(Error 에러)- 시스템 레벨에서 발생)  
-
+ex) 메모리 부족(OutOfMemoryError), 스택오버플로우(StackOverFlowError)  
 
 **2. Exception(예외)**  
 사용자의 잘못된 조작 또는 개발자의 잘못된 코딩으로 인해 발생하는 프로그램 오류.  
 예외가 발생하면 프로그램이 종료가 된다는 것은 에러와 동일하지만 예외는 예외처리(Exception Handling)를 통해 프로그램을 종료되지 않고 정상적으로 작동되게 만들어줄 수 있다. 자바에서 예외처리는 Try Catch문을 통해 처리가능  
-ex) ![image](https://user-images.githubusercontent.com/93306939/170161967-55fab383-6bf9-4866-b967-0c9b85630854.png)
+즉, 예외는 발생할 상황을 미리 예측하여 처리할 수 있다 (Exception(예외) - 보통 예외는 개발자 or 사용자가 낸다)  
 
-즉, 예외는 발생할 상황을 미리 예측하여 처리할 수 있다 (Exception(예외) - 보통 예외는 개발자 or 사용자가 낸다)
+ex)  
+![image](https://user-images.githubusercontent.com/93306939/170161967-55fab383-6bf9-4866-b967-0c9b85630854.png)
+
+
+그러면 우리가 처리 가능한 Exception의 종류에 대해 알아보도록 하자.  
+Exception의 종류에는 **Checked Exception**과 **Unchecked Exception**이 있다.  
+두 Exception의 가장 큰 차이는 '반드시 예외 처리를 해야 하는가?' 이다.  
 
 ![image](https://user-images.githubusercontent.com/93306939/170161109-2d72820c-ee0f-4cdb-8034-08f2414b2ff9.png)
 
-그러면 우리가 처리 가능한 Exception의 종류에 대해 알아보도록 하자.
-Exception의 종류에는 **Checked Exception**과 **Unchecked Exception**이 있다.  
-두 Exception의 가장 큰 차이는 '반드시 예외 처리를 해야 하는가?' 이다.  
 
 **Checked Exception은** 체크 하는 시점이 컴파일 단계이기 때문에,  
 별도의 예외 처리를 하지 않는다면 컴파일 자체가 되지 않는다. **반드시 예외 처리가 필요하다!!**  
@@ -793,7 +794,7 @@ Exception의 종류에는 **Checked Exception**과 **Unchecked Exception**이 �
 예외는 예외처리(Exception Handling)를 통해 프로그램을 종료되지 않고 정상적으로 작동되게 만들어줄 수 있다.  
 자바에서 예외처리는 Try Catch문을 통해 해 줄 수 있습니다.  
 
-예외 처리에 대한 자세한 방법은 아래 사이트를 참조 바란다
+예외 처리에 대한 자세한 방법은 아래 사이트를 참조 바람  
 [자바의 예외처리](https://ccm3.net/archives/20672)
 
 
