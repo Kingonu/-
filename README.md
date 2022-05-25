@@ -850,6 +850,7 @@ Exception의 종류에는 **Checked Exception**과 **Unchecked Exception**이 �
  
 # 재귀호출
 
+```
 #include <stdio.h>  
   
 int factorial(int n)  
@@ -866,6 +867,7 @@ int main()
   
     return 0;  
 }  
+```
 
 형, 함수 factorial(int n)에 5를 넣어  
 그러면 if로 들어가 (n == 1) 5니까 false야   
