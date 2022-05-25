@@ -805,7 +805,7 @@ Exception의 종류에는 **Checked Exception**과 **Unchecked Exception**이 �
  ![image](https://user-images.githubusercontent.com/93306939/170173607-f0747961-1af2-400f-9989-29a07aeb5e8e.png)
 ![image](https://user-images.githubusercontent.com/93306939/170173624-875f563a-9277-4307-94b4-de6f24a6b23e.png)
 
-**1. JAVA Thread**  
+**JAVA Thread**  
 - 자바 가상 기계(JVM)에 의해 스케쥴되는 실행 단위의 코드 블럭  
 - 스레드의 생명 주기는 JVM에 의해 관리됨  
  
